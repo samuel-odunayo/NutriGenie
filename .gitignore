@@ -1,0 +1,56 @@
+# Python & Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+
+# Databases & Local SQLite
+*.db
+*.sqlite
+*.sqlite3
+nutrifit.db
+
+# Node.js & Frontend dependencies
+frontend/node_modules/
+node_modules/
+frontend/dist/
+dist/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Figma temporary backup
+frontend/_figma_mobile_backup/
+
+# Documents, PDFs & Report Generators
+*.pdf
+*.docx
+*.doc
+NutriGenie_Supporting_Evidence.*
+generate_docx.py
+generate_supporting_evidence.py

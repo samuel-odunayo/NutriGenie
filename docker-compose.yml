@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: nutrifit-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PROJECT_NAME=NutriGenie API
+      - DATABASE_URL=sqlite+aiosqlite:///./nutrifit.db
+      - SECRET_KEY=nutrigenie_production_secret_key_abuja_fct_2026
+    volumes:
+      - nutrifit-data:/app
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nutrifit-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  nutrifit-data:
